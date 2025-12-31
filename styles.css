@@ -2,12 +2,12 @@
    RESET & BASE STYLING
 ========================= */
 :root {
-    --primary: #0f172a;       /* Dark blue */
-    --accent: #2563eb;        /* Bright blue */
-    --background: #f8fafc;    /* Light gray */
-    --surface: #ffffff;       /* Section background */
-    --text: #1e293b;          /* Main text color */
-    --muted: #64748b;         /* Secondary text */
+    --primary: #0f172a;
+    --accent: #2563eb;
+    --background: #f8fafc;
+    --surface: #ffffff;
+    --text: #1e293b;
+    --muted: #64748b;
     --radius: 10px;
 }
 
@@ -95,21 +95,22 @@ li {
 ========================= */
 .about-container {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 20px;
     flex-wrap: wrap;
 }
 
 .vidhuraj-image {
-    width: 150px;
-    height: 150px;
+    width: 120px; /* smaller, balanced */
+    height: 120px;
     border-radius: 50%;
     object-fit: cover;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
 }
 
 .about-text {
     flex: 1;
+    max-width: 600px;
 }
 
 /* =========================
@@ -183,4 +184,4 @@ footer {
     .about-text {
         margin-top: 15px;
     }
- }
+}
