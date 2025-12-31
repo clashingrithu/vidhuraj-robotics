@@ -101,9 +101,7 @@ li {
 }
 
 .vidhuraj-image {
-    width: 120px; /* smaller, balanced */
-    height: 120px;
-    border-radius: 50%;
+    width: 100%; /* smaller, balanced */
     object-fit: cover;
     box-shadow: 0 6px 15px rgba(0,0,0,0.15);
 }
