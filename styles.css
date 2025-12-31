@@ -1,21 +1,21 @@
- /* =========================
-   1. RESET & DESIGN SYSTEM
-   ========================= */
-
+/* =========================
+   RESET & BASE STYLING
+========================= */
 :root {
-    --primary: #0f172a;     /* Dark blue */
-    --accent: #2563eb;      /* Blue highlight */
-    --background: #f8fafc;  /* Light gray */
-    --surface: #ffffff;     /* White cards */
-    --text: #1e293b;        /* Main text */
-    --muted: #64748b;       /* Secondary text */
+    --primary: #0f172a;       /* Dark blue */
+    --accent: #2563eb;        /* Bright blue */
+    --background: #f8fafc;    /* Light gray */
+    --surface: #ffffff;       /* Section background */
+    --text: #1e293b;          /* Main text color */
+    --muted: #64748b;         /* Secondary text */
+    --radius: 10px;
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    font-family: "Roboto", Arial, sans-serif;
 }
 
 body {
@@ -25,14 +25,13 @@ body {
 }
 
 /* =========================
-   2. PAGE LAYOUT
-   ========================= */
-
+   HEADER
+========================= */
 header {
     background-color: var(--primary);
-    color: #ffffff;
-    padding: 60px 20px;
+    color: #fff;
     text-align: center;
+    padding: 60px 20px;
 }
 
 header h1 {
@@ -45,41 +44,46 @@ header p {
     color: #cbd5f5;
 }
 
+/* =========================
+   MAIN CONTENT
+========================= */
 main {
     max-width: 900px;
     margin: 40px auto;
     padding: 0 20px;
 }
 
-/* =========================
-   3. SECTIONS (CONTENT BLOCKS)
-   ========================= */
-
 section {
     background-color: var(--surface);
     padding: 30px;
     margin-bottom: 30px;
-    border-radius: 10px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+    border-radius: var(--radius);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.06);
 }
 
 section h2 {
     margin-bottom: 15px;
     font-size: 1.6rem;
     color: var(--primary);
+    border-left: 4px solid var(--accent);
+    padding-left: 10px;
 }
 
 section p {
     margin-bottom: 15px;
-    color: var(--text);
 }
-
-/* =========================
-   4. LISTS
-   ========================= */
 
 ul {
     padding-left: 20px;
+    margin-bottom: 15px;
+}
+
+ul li::before {
+    content: "•";
+    color: var(--accent);
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
 }
 
 li {
@@ -87,29 +91,46 @@ li {
 }
 
 /* =========================
-   5. TABLE (ROBOTICS KIT)
-   ========================= */
+   ABOUT SECTION FLEX
+========================= */
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
 
+.vidhuraj-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.about-text {
+    flex: 1;
+}
+
+/* =========================
+   TABLE STYLING
+========================= */
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 20px;
+    margin-top: 15px;
 }
 
 caption {
     caption-side: top;
     font-weight: 600;
     margin-bottom: 10px;
-    color: var(--primary);
-}
-
-thead {
-    background-color: var(--primary);
-    color: #ffffff;
+    color: var(--accent);
 }
 
 th, td {
-    padding: 12px 14px;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
     text-align: left;
 }
 
@@ -117,32 +138,49 @@ tbody tr:nth-child(even) {
     background-color: #f1f5f9;
 }
 
-tfoot {
-    background-color: #e2e8f0;
-    font-weight: 600;
-}
-
 /* =========================
-   6. LINKS (INSTAGRAM)
-   ========================= */
-
+   LINKS
+========================= */
 a {
     color: var(--accent);
     font-weight: 500;
     text-decoration: none;
 }
 
-a:hover {
+a:hover,
+a:focus {
     text-decoration: underline;
 }
 
 /* =========================
-   7. FOOTER
-   ========================= */
-
+   FOOTER
+========================= */
 footer {
     text-align: center;
     padding: 20px;
     font-size: 0.9rem;
     color: var(--muted);
 }
+
+/* =========================
+   RESPONSIVENESS
+========================= */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    .about-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .about-text {
+        margin-top: 15px;
+    }
+ }
