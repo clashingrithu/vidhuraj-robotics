@@ -101,7 +101,7 @@ li {
 }
 
 .vidhuraj-image {
-    width: 100%; /* smaller, balanced */
+     /* smaller, balanced */
     object-fit: cover;
     box-shadow: 0 6px 15px rgba(0,0,0,0.15);
 }
