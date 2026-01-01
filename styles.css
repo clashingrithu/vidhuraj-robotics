@@ -1,4 +1,9 @@
 /* =========================
+   FONT IMPORT (Google Fonts)
+========================= */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+/* =========================
    RESET & BASE STYLING
 ========================= */
 :root {
@@ -41,7 +46,7 @@ header h1 {
 
 header p {
     font-size: 1.1rem;
-    color: #cbd5f5;
+    color: #cbd5e5;
 }
 
 /* =========================
@@ -97,17 +102,14 @@ li {
     display: flex;
     align-items: center;
     gap: 20px;
-    
 }
 
 .vidhuraj-image {
-     /* smaller, balanced */
-    width: 120px;          /* control size */
-  height: 120px;         /* must match width for perfect circle */
-  border-radius: 50%;    /* makes it circular */
-  object-fit: cover;   /* prevents image distortion */
-   flex-shrink: 0;
-    
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
 }
 
 .about-text {
@@ -129,12 +131,18 @@ caption {
     font-weight: 600;
     margin-bottom: 10px;
     color: var(--accent);
+    text-align: left;
 }
 
 th, td {
     padding: 12px;
-    border: bd5e1;
+    border: 1px solid #e2e8f0;  /* Fixed: valid border */
     text-align: left;
+}
+
+th {
+    background-color: #f1f5f9;
+    font-weight: 600;
 }
 
 tbody tr:nth-child(even) {
@@ -186,9 +194,11 @@ footer {
     .about-text {
         margin-top: 15px;
     }
-   }
-/* Signup Section */
+}
 
+/* =========================
+   SIGNUP SECTION
+========================= */
 .signup-section {
     max-width: 800px;
     margin: 3rem auto;
@@ -196,10 +206,12 @@ footer {
     background: #f9fafb;
     border-radius: 12px;
     text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.06);
 }
 
 .signup-section h2 {
     margin-bottom: 0.5rem;
+    color: var(--primary);
 }
 
 .signup-section p {
@@ -208,7 +220,6 @@ footer {
 }
 
 /* Form styling */
-
 .signup-form {
     display: flex;
     flex-wrap: wrap;
@@ -221,18 +232,26 @@ footer {
     width: 240px;
     border: 1px solid #ccc;
     border-radius: 6px;
+    font-size: 1rem;
+}
+
+.signup-form input:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
 }
 
 .signup-form button {
     padding: 0.7rem 1.5rem;
-    background: #2563eb;
+    background: var(--accent);
     color: white;
     border: none;
     border-radius: 6px;
     cursor: pointer;
+    font-weight: 500;
+    transition: background 0.2s;
 }
 
 .signup-form button:hover {
-    background: #1e40af;
+    background: #1d4ed8;
 }
-
