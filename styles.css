@@ -186,4 +186,53 @@ footer {
     .about-text {
         margin-top: 15px;
     }
+   }
+/* Signup Section */
+
+.signup-section {
+    max-width: 800px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background: #f9fafb;
+    border-radius: 12px;
+    text-align: center;
 }
+
+.signup-section h2 {
+    margin-bottom: 0.5rem;
+}
+
+.signup-section p {
+    margin-bottom: 1.5rem;
+    color: #555;
+}
+
+/* Form styling */
+
+.signup-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.signup-form input {
+    padding: 0.7rem;
+    width: 240px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.signup-form button {
+    padding: 0.7rem 1.5rem;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.signup-form button:hover {
+    background: #1e40af;
+}
+
