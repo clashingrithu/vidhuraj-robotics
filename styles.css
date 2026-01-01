@@ -102,7 +102,12 @@ li {
 
 .vidhuraj-image {
      /* smaller, balanced */
-    object-fit: cover;
+    width: 140px;          /* control size */
+  height: 140px;         /* must match width for perfect circle */
+  border-radius: 50%;    /* makes it circular */
+  object-fit: cover;     /* prevents image distortion */
+  float: left;           /* moves image to the left */
+  margin-right: 20px;
     box-shadow: 0 6px 15px rgba(0,0,0,0.15);
 }
 
