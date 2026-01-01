@@ -95,20 +95,19 @@ li {
 ========================= */
 .about-container {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     gap: 20px;
-    flex-wrap: wrap;
+    
 }
 
 .vidhuraj-image {
      /* smaller, balanced */
-    width: 140px;          /* control size */
-  height: 140px;         /* must match width for perfect circle */
+    width: 120px;          /* control size */
+  height: 120px;         /* must match width for perfect circle */
   border-radius: 50%;    /* makes it circular */
-  object-fit: cover;     /* prevents image distortion */
-  float: left;           /* moves image to the left */
-  margin-right: 20px;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  object-fit: cover;   /* prevents image distortion */
+   flex-shrink: 0;
+    
 }
 
 .about-text {
@@ -134,7 +133,7 @@ caption {
 
 th, td {
     padding: 12px;
-    border: 1px solid #cbd5e1;
+    border: bd5e1;
     text-align: left;
 }
 
